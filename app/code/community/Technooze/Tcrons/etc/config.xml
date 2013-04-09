@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Technooze_Tcrons>
+            <version>0.1.0</version>
+        </Technooze_Tcrons>
+    </modules>
+    <global>
+        <models>
+            <tcrons>
+                <class>Technooze_Tcrons_Model</class>
+            </tcrons>
+        </models>
+    </global>
+    <crontab>
+        <jobs>
+            <tcrons_sample>
+                <schedule>
+					<!-- run once every minute ;) -->
+                    <cron_expr>* * * * *</cron_expr>
+                </schedule>
+                <run>
+                    <!-- module/class::method -->
+                    <model>tcrons/crons::runTestMageCron</model>
+                </run>
+            </tcrons_sample>
+        </jobs>
+    </crontab>
+</config>
